@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnaLingo - Login</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            AnaLingo
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="courses.html">Courses</a>
+            </li>
+            <li>
+                <a href="teachers.html">Teachers</a>
+            </li>
+            <li>
+                <a href="placement-test.html">Placement Test</a>
+            </li>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="login-section">
+        <div class="login-card">
+            <div class="login-icon">
+                👋
+            </div>
+            <h1>
+                Welcome Back
+            </h1>
+            <p class="login-description">
+                Log in to continue your English learning journey.
+            </p>
+            <form id="loginForm">
+                <label for="email">
+                    Email Address
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+                <label for="password">
+                    Password
+                </label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Enter your password"
+                    required
+                >
+                <div class="login-options">
+                    <label class="remember">
+                        <input type="checkbox">
+                        Remember me
+                    </label>
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+                </div>
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Login
+                </button>
+            </form>
+<p class="signup-text">
+    Don't have an account?
+    <button
+        type="button"
+        onclick="window.location.href='signup.html'"
+        style="
+            border: none;
+            background: none;
+            color: #5b4bdb;
+            font-weight: bold;
+            cursor: pointer;
+            font-size: 14px;
+        "
+    >
+        Create Account
+    </button>
+</p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            © 2026 AnaLingo. All rights reserved.
+        </p>
+    </footer>
+    <script>
+        document
+            .getElementById("loginForm")
+            .addEventListener("submit", function(event) {
+                event.preventDefault();
+                const email =
+                    document.getElementById("email").value;
+                const password =
+                    document.getElementById("password").value;
+                if (
+                    email !== "" &&
+                    password !== ""
+                ) {
+                    window.location.href =
+                        "dashboard.html";
+                }
+            });
+    </script>
+</body>
+</html>

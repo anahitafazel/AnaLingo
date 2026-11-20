@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnaLingo - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            AnaLingo
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="courses.html">Courses</a>
+            </li>
+            <li>
+                <a href="teachers.html">Teachers</a>
+            </li>
+            <li>
+                <a href="placement-test.html">Placement Test</a>
+            </li>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="dashboard-header">
+        <div>
+            <p class="welcome">
+                Welcome back 👋
+            </p>
+            <h1 id="dashboardName">
+                Anahita's Dashboard
+            </h1>
+            <p>
+                Keep learning and improve your English skills.
+            </p>
+        </div>
+        <div class="dashboard-avatar">
+            👩🏼‍💻
+        </div>
+    </section>
+    <section class="dashboard">
+        <div class="dashboard-grid">
+            <div class="dashboard-card level-card">
+                <div class="card-icon">
+                    🎯
+                </div>
+                <div>
+                    <span>
+                        Current Level
+                    </span>
+                    <h2>
+                        B2
+                    </h2>
+                    <p>
+                        Upper Intermediate
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    📚
+                </div>
+                <div>
+                    <span>
+                        Active Course
+                    </span>
+                    <h2>
+                        English B2
+                    </h2>
+                    <p>
+                        8 lessons completed
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    🔥
+                </div>
+                <div>
+                    <span>
+                        Learning Streak
+                    </span>
+                    <h2>
+                        7 Days
+                    </h2>
+                    <p>
+                        Keep it going!
+                    </p>
+                </div>
+            </div>
+            <div class="dashboard-card">
+                <div class="card-icon">
+                    ⭐
+                </div>
+                <div>
+                    <span>
+                        Total Points
+                    </span>
+                    <h2>
+                        1,240
+                    </h2>
+                    <p>
+                        Great progress!
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-content">
+            <div class="progress-card">
+                <h2>
+                    Your Learning Progress
+                </h2>
+                <p>
+                    English B2
+                </p>
+                <div class="learning-progress">
+                    <div class="learning-progress-bar"></div>
+                </div>
+                <div class="progress-info">
+                    <span>
+                        68% completed
+                    </span>
+                    <span>
+                        17 / 25 lessons
+                    </span>
+                </div>
+            </div>
+            <div class="recommended-card">
+                <h2>
+                    Recommended for You
+                </h2>
+                <p>
+                    Practice speaking with our AI English Assist
+<script>
+    const userName =
+        localStorage.getItem("userName");
+    if (userName) {
+        document.getElementById("dashboardName").textContent =
+            `${userName}'s Dashboard`;
+    }
+</script>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnaLingo - Create Account</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            AnaLingo
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="courses.html">Courses</a>
+            </li>
+            <li>
+                <a href="teachers.html">Teachers</a>
+            </li>
+            <li>
+                <a href="placement-test.html">Placement Test</a>
+            </li>
+            <li>
+                <a href="dashboard.html">Dashboard</a>
+            </li>
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+        </ul>
+    </nav>
+    <section class="login-section">
+        <div class="login-card">
+            <div class="login-icon">
+                ✨
+            </div>
+            <h1>
+                Create Your Account
+            </h1>
+            <p class="login-description">
+                Join AnaLingo and start your English learning journey.
+            </p>
+            <form id="signupForm">
+                <label for="name">
+                    Full Name
+                </label>
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your full name"
+                    required
+                >
+                <label for="email">
+                    Email Address
+                </label>
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Enter your email"
+                    required
+                >
+                <label for="password">
+                    Password
+                </label>
+                <input
+                    type="password"
+                    id="password"
+                    placeholder="Create a password"
+                    required
+                >
+                <label for="confirm-password">
+                    Confirm Password
+                </label>
+                <input
+                    type="password"
+                    id="confirm-password"
+                    placeholder="Confirm your password"
+                    required
+                >
+                <button
+                    type="submit"
+                    class="login-btn"
+                >
+                    Create Account
+                </button>
+            </form>
+            <p class="signup-text">
+                Already have an account?
+                <a href="login.html">
+                    Login
+                </a>
+            </p>
+        </div>
+    </section>
+    <footer>
+        <p>
+            © 2026 AnaLingo. All rights reserved.
+        </p>
+    </footer>
+    <script>
+    document
+        .getElementById("signupForm")
+        .addEventListener("submit", function(event) {
+            event.preventDefault();
+            const name =
+                document.getElementById("name").value.trim();
+            const email =
+                document.getElementById("email").value.trim();
+            const password =
+                document.getElementById("password").value;
+            const confirmPassword =
+                document.getElementById("confirm-password").value;
+            if (password !== confirmPassword) {
+                alert("Passwords do not match.");
+                return;
+            }
+            if (
+                name !== "" &&
+                email !== "" &&
+                password !== ""
+            ) {
+                localStorage.setItem("userName", name);
+                alert(
+                    "Account created successfully! Welcome to AnaLingo 🎉"
+                );
+                window.location.href = "dashboard.html";
+            }
+        });
+</script>
+</body>
+</html>
